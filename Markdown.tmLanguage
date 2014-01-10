@@ -313,6 +313,15 @@
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>fenced-codeblock</key>
+		<dict>
+			<key>begin</key>
+			<string>\s*(```\s*|{%\s*codeblock\s+).*(%})?\s*$</string>
+			<key>end</key>
+			<string>(```|{%\s*endcodeblock\s*%})\s*\n</string>
+		    <key>name</key>
+		    <string>markup.raw.block.markdown markup.raw.block.fenced.markdown</string>
+		</dict>
 		<key>ampersand</key>
 		<dict>
 			<key>comment</key>
@@ -876,6 +885,10 @@
 		<dict>
 			<key>patterns</key>
 			<array>
+				<dict>
+				    <key>include</key>
+				    <string>#fenced-codeblock</string>
+				</dict>
 				<dict>
 					<key>include</key>
 					<string>#escape</string>

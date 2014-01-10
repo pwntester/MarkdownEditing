@@ -808,6 +808,19 @@
                 <string>#d5f6ff88</string>
             </dict>
         </dict>
+        <dict>
+                <key>name</key>
+                <string>Code Block</string>
+                <key>scope</key>
+                <string>markup.raw.block.fenced.markdown</string>
+                <key>settings</key>
+                <dict>
+                        <key>background</key>
+                        <string>#222</string>
+                        <key>foreground</key>
+                        <string>#ffffff</string>
+                </dict>
+        </dict>
     </array>
     <key>uuid</key>
     <string>BF4E1964-0DB9-4E88-8142-E8F52D7EDEEC</string>

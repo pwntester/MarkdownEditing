@@ -286,6 +286,15 @@
 	</array>
 	<key>repository</key>
 	<dict>
+        <key>fenced-codeblock</key>
+        <dict>
+        	<key>begin</key>
+        	<string>\s*(```\s*|{%\s*codeblock\s+).*(%})?\s*$</string>
+        	<key>end</key>
+        	<string>(```|{%\s*endcodeblock\s*%})\s*\n</string>
+            <key>name</key>
+            <string>markup.raw.block.markdown markup.raw.block.fenced.markdown</string>
+        </dict>
 		<key>ampersand</key>
 		<dict>
 			<key>comment</key>
@@ -707,62 +716,67 @@
 		<dict>
 			<key>patterns</key>
 			<array>
-				<dict>
-					<key>include</key>
-					<string>#escape</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#ampersand</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#bracket</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#raw</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#bold</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#italic</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#line-break</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#image-inline</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#link-inline</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#link-inet</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#link-email</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#image-ref</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#link-ref-literal</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#link-ref</string>
-				</dict>
+                <dict>
+                    <key>include</key>
+                    <string>#fenced-codeblock</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#escape</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#ampersand</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#bracket</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#raw</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#bold</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#italic</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#line-break</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#image-inline</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#link-inline</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#link-inet</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#link-email</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#image-ref</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#link-ref-literal</string>
+                </dict>
+                <dict>
+                	<key>include</key>
+                	<string>#link-ref</string>
+                </dict>
+
 			</array>
 		</dict>
 		<key>italic</key>
